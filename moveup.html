@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+	Move an element to left, right,
+	up and down using arrow keys
+	</title>
+	<script src=
+"https://code.jquery.com/jquery-1.12.4.min.js">
+	</script>
+	<style type="text/css">
+        .parent{
+            position: relative;
+            height: 70vh;
+            border-bottom: 1px solid snow;
+        }
+		.box {
+			background: green;
+			/* margin: 100px auto 0; */
+			width: 100px;
+			height: 100px;
+			color: white;
+			font-size: 24px;
+			border: 1px solid #000000;
+			text-align: center;
+			position: absolute;
+            bottom: 0px;
+		}
+        body{
+            background: red;
+            /* position: relative; */
+        }
+        .smallbox{
+            position:absolute;
+            bottom: 0;
+            height: 90px;
+            width: 100%;
+        }
+        .dmallbo{
+            background-color: yellow;
+            height: 20px;
+        }
+	</style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="box">UP</div>
+        <div class="smallbox">
+            <marquee  direction="left" height="100px">
+                <div class="dmallbo"></div>
+                
+            </marquee>
+        </div>
+
+    </div>
+		<script type="text/javascript">
+            const parentBottom = $('.parent').offset().top + $('.parent').outerHeight();
+        console.log(parentBottom);
+			$(document).keydown(function(e) {
+            let tops = parseInt($('.box').css('top'));
+            if (e.which == '32') { //up arrow key
+                console.log(tops);
+                if(tops >= 100) {
+                    $(".box").finish().animate({
+                        top: '-=100'
+                    },1000)
+                    .delay(500)
+                    .queue(function(next) {
+                    $(this).animate({
+                        top: '+=100'
+                    }, 1000);
+                    next();
+                    });
+                }
+            }
+			})
+            // $(document).keydown(function(e){
+            //     const bottom = parseInt($('.box').css('top'));
+            //     if(e.which=='40'){
+            //         console.log(bottom);
+            //         if(bottom!=0)
+            //             $('.box').finish().animate({
+            //                 top:"+=50"
+            //             })
+            //     }
+            // })
+		</script>
+</body>
+</html>					

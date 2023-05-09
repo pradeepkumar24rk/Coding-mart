@@ -1,0 +1,66 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#game{
+    height: 800px;
+    width: 90vw;
+    margin: 40px auto;
+}
+
+#container{
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0px;
+}
+.tank{
+    position: relative;
+    top: 0;
+    height: 250px;
+    width: 250px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.tap img{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: -20px;
+    left: 235px;
+}
+
+.tank .empty{
+    height: 50px;
+}
+
+.tank .water{
+    height: 200px;
+    background-color: var(--color);
+}
+
+.tank .flow{
+    position: absolute;
+    top: 236px;
+    left: 290px;
+    height: 300px;
+    width: 8px;
+    background-color: var(--color);
+}
+
+#storage{
+    width: 90vw;
+    height: 300px;
+    border: 1px solid black;
+    border-top: 0px;
+    position: relative;
+}
+
+#storage .empty{
+    height: 200px;
+}
+
+#storage .water{
+    height: 100px;
+    background-color: rgb(255, 250, 240);
+}

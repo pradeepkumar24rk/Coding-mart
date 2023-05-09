@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mix the color</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="game">
+        <div id="container">
+            <div id="tank1" class="tank">
+                <div id="empty1" class="empty"></div>
+                <div id="water1" class="water" style="--color: rgb(255, 0, 0);"></div>
+                <div class="tap">
+                    <img src="tap.png" />
+                </div>
+                <div id="pipe1" class="pipe" style="--color: red;"></div>
+            </div>
+            <div id="tank2" class="tank">
+                <div id="empty2" class="empty"></div>
+                <div id="water2"  class="water" style="--color: rgb(0, 150, 0);"></div>
+                <div class="tap">
+                    <img src="tap.png" />
+                </div>
+                <div id="pipe2" class="pipe" style="--color: rgb(0, 150, 0);"></div>
+            </div>
+            <div id="tank3" class="tank">
+                <div id="empty3" class="empty"></div>
+                <div id="water3"  class="water" style="--color: rgb(0, 0, 255);"></div>
+                <div class="tap">
+                    <img src="tap.png" />
+                </div>
+                <div id="pipe3" class="pipe" style="--color: blue;"></div>
+            </div>
+            
+        </div>
+        <div id="storage">
+            <div class="empty"></div>
+            <div id="storage-water" class="water"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

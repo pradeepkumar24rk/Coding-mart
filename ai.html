@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0" />
+
+	<style>
+	body {
+		background-color: aqua;
+		display: flex;
+		align-items: center;
+	}
+
+	.ball {
+		height: 12rem;
+		width: 12rem;
+		background-color: white;
+		border-radius: 50%;
+		margin-top: 20rem;
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+	<div class="ball" id="ballID"></div>
+	</div>
+	<script>
+	let ball = document.getElementById("ballID");
+
+	var myVar = setInterval(spostaDiv, 90);
+	var margin = 0;
+
+	let l = window.screen.width;
+	let w = 1300;
+
+	function spostaDiv() {
+		console.log(w);
+		if (margin == 100) {
+		margin = 0 + "px";
+		} else {
+		ball.style.marginLeft = margin + "px";
+		}
+		margin += 10;
+	}
+	</script>
+</body>
+</html>

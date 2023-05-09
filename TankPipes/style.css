@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 50px 90px;
+}
+.tank{
+    display: flex;
+    /* border: 1px solid; */
+    gap:40px ;
+}
+.redTank{
+flex: 1;
+border: 1px solid;
+height: 100px;
+background-color: red;
+
+}
+.greenTank{
+flex: 1;
+border: 1px solid;
+height: 100px;
+background-color: green;
+
+}
+.blueTank{
+flex: 1;
+border: 1px solid;
+height: 100px;
+background-color: blue;
+
+}

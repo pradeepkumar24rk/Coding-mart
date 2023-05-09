@@ -1,0 +1,52 @@
+*{
+    overflow: hidden;
+}
+.BallPin{
+    border: 3px solid black;
+    height: 200px;
+    width: 800px;
+    margin: auto;
+}
+#Ball{
+    background-color: rgba(114, 108, 108, 0.726);
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin-left:10px ;
+    position: relative;
+    top: 180px;
+
+}
+.jump{
+    animation: jump 1s linear;
+}
+
+@keyframes jump {
+    0%{
+        top: 180px;
+    }
+    30%{
+        top: 130px;
+    }
+    50%{
+        top: 90px;
+    }
+    100%{
+        top: 180px;
+    }
+}
+#Pin{
+    position: relative;
+    top: 180px;
+    left:100%;
+    animation: pin 2.3s infinite linear;
+}
+
+@keyframes pin {
+    0%{
+        left:100%;
+    }
+    100%{
+        left:-10px;
+    }
+}
